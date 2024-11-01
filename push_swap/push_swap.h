@@ -34,7 +34,6 @@ typedef struct	s_stack
 	int		target;
 	int		cost_a;
 	int		cost_b;
-	int		cost_total;
 	int		pos;
 	struct s_stack *next;
 }				t_stack;
@@ -91,5 +90,6 @@ int		find_lowest_pos(t_stack **stack);
 void	get_position(t_stack **stack);
 void	get_index(t_stack *a);
 void	print_all(t_stack **stack);
+int		find_median(t_stack *a);
 
 #endif

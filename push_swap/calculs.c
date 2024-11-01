@@ -50,3 +50,13 @@ int	find_objective_b(t_stack **a, t_stack *b)
 		target = find_lowest_pos(a);
 	return (target);
 }
+
+int	find_median(t_stack *a)
+{
+	int	size;
+	int	median;
+
+	size = ft_get_size(a);
+	median = size / 2;
+	return (median);
+}

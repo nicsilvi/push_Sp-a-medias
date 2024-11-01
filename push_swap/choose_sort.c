@@ -53,15 +53,18 @@ void	sort_three(t_stack **stack)
 
 void	sort(t_stack **a, t_stack **b)
 {
+
+//	printf("antes de nada\n");
+//	print_all(a);
 	move_a_to_b(a, b);
-	printf("stack A despues de movrse\n");
-	print_all(a);
-	printf("stack B despues de movrse\n");
-	print_all(b);
+//	printf("stack A despues de movrse\n");
+//	print_all(a);
+//	printf("stack B despues de movrse\n");
+//	print_all(b);
 	sort_three(a);
 
-	printf("stack A despues de sort3\n");
-	print_all(a);
+//	printf("stack A despues de sort3\n");
+//	print_all(a);
 	while (*b)
 	{
 		get_position(a);
@@ -69,17 +72,19 @@ void	sort(t_stack **a, t_stack **b)
 		targets(a, b);
 		costs_to_up_b(b, a);
 		find_cheapest(a, b);
-		printf("dentroo del while a \n");
-		print_all(a);
-		printf("dentro del while B\n");
-		print_all(b);
+//		printf("dentroo del while a \n");
+//		print_all(a);
+//		printf("dentro del while B\n");
+//		print_all(b);
 	}
-	printf("stack A despues de while B\n");
-	print_all(a);
-	printf("stack B \n");
-	print_all(b);
+//	printf("stack A despues de while B\n");
+//	print_all(a);
+//	printf("stack B \n");
+//	print_all(b);
 	if (!is_ordered(a))
 		adjust_a(a);
+//	printf("after ajust\n");
+//	print_all(a);
 }
 
 void adjust_a(t_stack **a)
